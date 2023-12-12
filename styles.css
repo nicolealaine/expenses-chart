@@ -1,0 +1,265 @@
+:root {
+    --soft-red: hsl(10, 79%, 65%);
+    --darkBrown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --paleorange: hsl(33, 100%, 98%);
+    --cyan: hsl(186, 34%, 60%)
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--darkBrown);
+    font-family: 'DM Sans', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 345px;
+    margin: 20px auto;
+    border-radius: 0.5rem;
+}
+
+#balance-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    background-color: var(--soft-red);
+    padding: 0.7rem 1.5rem;
+    color: var(--paleorange);
+}
+
+#balance-section h2 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.balance-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0.5rem 0;
+}
+
+.curr-balance {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+
+.logo img {
+    height: 2.2rem;
+}
+
+#spending-section {
+    background-color: var(--paleorange);
+    padding: 0 1rem;
+}
+
+#spending-section h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+#chart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--cream);
+    height: 250px;
+    margin-top: 10px;
+}
+
+.chart-day {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 38px;
+    height: 120%;
+    text-align: center;
+
+}
+
+.chart-day p {
+    font-size: 0.7rem;
+    color: var(--medium-brown);
+    font-weight: 400;
+}
+
+.chart-day:hover>.bar-container {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.chart-day:hover>.hidden-total {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--paleorange);
+}
+
+.hidden-total {
+    display: none;
+    width: 100%;
+    height: 30px;
+    margin: auto;
+    margin-top: 0;
+    border-radius: 0.2rem;
+    margin-bottom: 0.4rem;
+    background-color: var(--darkBrown);
+}
+
+.hidden-total p {
+    color: var(--paleorange);
+    font-size: 0.7rem;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.month-total,
+.from-last {
+    font-size: 0.8rem;
+    color: var(--medium-brown);
+    font-weight: 400;
+}
+
+.red-bar {
+    background-color: var(--soft-red);
+}
+
+.blue-bar {
+    background-color: var(--cyan);
+}
+
+.bar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.bar {
+    display: block;
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    margin-bottom: 0;
+    border-radius: 0.2rem;
+    background-color: var(--soft-red);
+}
+
+
+#totals {
+    margin: .5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.this-month {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.month-total {
+    margin-bottom: 2px;
+}
+
+.month-total-num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 auto;
+    letter-spacing: 1px;
+}
+
+.last {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+}
+
+.from-last {
+    text-align: right;
+    margin: 0;
+}
+
+.from-last-perc {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    font-size: 11px;
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 500px) {
+    section {
+
+        width: 450px;
+        margin: 20px auto;
+        border-radius: 1rem;
+    }
+
+    .curr-balance {
+        font-size: 1.5rem;
+
+    }
+
+    .month-total-num {
+        font-size: 2.2rem;
+    }
+
+    #spending-section {
+        padding: 0.5rem 1rem;
+    }
+
+    #spending-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .chart-day {
+        width: 60px;
+    }
+
+    .bar {
+        width: 75%;
+    }
+
+    #totals {
+        margin: 1.2rem 0;
+    }
+}

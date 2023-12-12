@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="chart.js"></script>
+  <title>Frontend Mentor | Expenses chart component</title>
+</head>
+
+<body>
+  <main>
+    <section id="balance-section">
+      <div class="balance-text">
+        <h2>My balance</h2>
+        <p class="curr-balance">$921.48</p>
+      </div>
+      <div class="logo"><img src="images/logo.svg" /></div>
+    </section>
+    <section id="spending-section">
+      <h2>Spending - Last 7 days</h2>
+
+      <div id="chart">
+        <div class="chart-day">
+          <div class="hidden-total"></div>
+          <div class="bar-container">
+            <div class="bar" id="mon"></div>
+          </div>
+          <p>mon</p>
+        </div>
+        <div class="chart-day">
+          <div class="hidden-total"></div>
+          <div class="bar-container">
+            <div class="bar" id="tue"></div>
+          </div>
+          <p>tue</p>
+        </div>
+        <div class="chart-day">
+          <div class="hidden-total"></div>
+          <div class="bar-container">
+            <div class="bar" id="wed"></div>
+          </div>
+          <p>wed</p>
+        </div>
+        <div class="chart-day">
+          <div class="hidden-total"></div>
+          <div class="bar-container">
+            <div class="bar" id="thu"></div>
+          </div>
+          <p>thu</p>
+        </div>
+        <div class="chart-day">
+          <div class="hidden-total"></div>
+          <div class="bar-container">
+            <div class="bar" id="fri"></div>
+          </div>
+          <p>fri</p>
+        </div>
+        <div class="chart-day">
+          <div class="hidden-total"></div>
+          <div class="bar-container">
+            <div class="bar" id="sat"></div>
+          </div>
+          <p>sat</p>
+        </div>
+        <div class="chart-day">
+          <div class="hidden-total"></div>
+          <div class="bar-container">
+            <div class="bar" id="sun"></div>
+          </div>
+          <p>sun</p>
+        </div>
+
+      </div>
+      <div id="totals">
+        <div class="this-month">
+          <p class="month-total">Total this month</p>
+          <p class="month-total-num">$478.33</p>
+        </div>
+        <div class="last">
+          <p class="from-last-perc">+2.4%</p>
+
+          <p class="from-last">from last month</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Nicole Crayne</a>.
+    </div>
+  </main>
+</body>
+
+</html>
